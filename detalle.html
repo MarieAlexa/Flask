@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles de Receta</title>
+</head>
+<body>
+    <h1>{{ receta.nombre }}</h1>
+    <p><strong>Ingredientes:</strong> {{ receta.ingredientes }}</p>
+    <p><strong>Pasos:</strong> {{ receta.pasos }}</p>
+    <a href="{{ url_for('editar_receta', receta_id=receta.id) }}">Editar</a> |
+    <a href="{{ url_for('eliminar_receta', receta_id=receta.id) }}">Eliminar</a> |
+    <a href="{{ url_for('home') }}">Volver</a>
+</body>
+</html>
